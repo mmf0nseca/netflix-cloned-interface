@@ -1,0 +1,136 @@
+:root {
+  --red: #e50914;
+  --black: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: var(--black);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+}
+
+#main {
+  background: url("../img/jurassic-main.jpg") no-repeat;
+  background-size: cover;
+  background-position: center 50%;
+}
+
+/***** HEADER *****/
+
+header .container {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  height: 68px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  padding: 15px 0 0 50px;
+  color: var(--red);
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+
+  transition: 0.3s ease all;
+}
+
+header nav a:hover {
+  color: #aaa;
+}
+
+/***** MAIN MOVIE *****/
+
+.main-movie {
+  font-size: 16px;
+  height: 700px;
+  padding-left: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-title img {
+  width: 300px;
+}
+
+.description {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 350px;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/***** BUTTONS *****/
+
+.btn {
+  border-radius: 3px;
+
+  padding: 11px 33px 11px 27px;
+  margin: 0 15px 0 0;
+
+  font-size: 20px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.btnPlay {
+  background-color: #fff;
+  border: none;
+  color: var(--black);
+}
+
+.btnPlay:hover {
+  background-color: #e2dcd9;
+  color: var(--black);
+}
+
+.btnInfo {
+  background-color: #6d6d6e;
+  border: none;
+  color: #fff;
+}
+
+.btnInfo:hover {
+  background-color: #6d6d6eb3;
+  color: #fff;
+}
+
+.btn i {
+  padding-right: 10px;
+}
+
+/***** MOVIE BOX *****/
+
+.movie-box {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carousel-movies {
+  margin: 10px;
+}
