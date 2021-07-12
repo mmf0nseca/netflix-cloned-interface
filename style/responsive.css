@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   #main {
     background-position: right 70px;
   }
@@ -23,24 +23,7 @@
     max-width: 230px;
     margin: 0;
     padding: 50px 0;
-    background-image: linear-gradient(
-      to bottom,
-      #060606,
-      #070707,
-      #080808,
-      #090909,
-      #0a0a0a,
-      #0b0b0b,
-      #0c0c0c,
-      #0d0d0d,
-      #0e0e0e,
-      #0f0f0f,
-      #101010,
-      #111111,
-      #121212,
-      #131313,
-      #141414
-    );
+    background-image: linear-gradient(to bottom, #060606, #151515);
     flex-direction: column;
     transition: 0.5s ease;
   }
