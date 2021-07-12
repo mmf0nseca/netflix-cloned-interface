@@ -3,6 +3,16 @@
   --black: #141414;
 }
 
+@font-face {
+  font-family: "netflix regular";
+  src: url("../fonts/NetflixSansRegular.otf");
+}
+
+@font-face {
+  font-family: "netflix light";
+  src: url("../fonts/NetflixSansLight.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,24 +22,39 @@
 
 body {
   background: var(--black);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "netflix regular";
   color: #fff;
 }
 
 #main {
-  background: url("../img/jurassic-main.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+    url("../img/jurassic-main.jpg") no-repeat;
   background-size: cover;
-  background-position: center 50%;
+  background-position: center 50px;
 }
 
 /***** HEADER *****/
 
 header .container {
-  background-color: rgba(0, 0, 0, 0.7);
-
-  height: 68px;
-
+  background-image: linear-gradient(
+    to bottom,
+    #060606,
+    #070707,
+    #080808,
+    #090909,
+    #0a0a0a,
+    #0b0b0b,
+    #0c0c0c,
+    #0d0d0d,
+    #0e0e0e,
+    #0f0f0f,
+    #101010,
+    #111111,
+    #121212,
+    #131313,
+    #141414
+  );
+  height: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,9 +62,9 @@ header .container {
 }
 
 header .logo {
-  padding: 15px 0 0 50px;
+  padding: 15px 0 0 25px;
   color: var(--red);
-  font-size: 40px;
+  font-size: 35px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -47,8 +72,7 @@ header .logo {
 header nav a {
   color: #fff;
   font-size: 16px;
-  margin-right: 10px;
-
+  padding-right: 25px;
   transition: 0.3s ease all;
 }
 
@@ -56,13 +80,67 @@ header nav a:hover {
   color: #aaa;
 }
 
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 5px;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 7%;
+  border-radius: 10px;
+  background: #fefefe;
+  transition: 1s ease;
+}
+
+.hamburger:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  width: 45%;
+  height: 7%;
+  border-radius: 10px;
+  background: #fefefe;
+  transition: 1s ease;
+}
+
+#hamburger:checked ~ label .hamburger:after {
+  transform: rotate(225deg);
+  top: 10px;
+  transition: 1s ease;
+}
+
+#hamburger:checked ~ label .hamburger:before {
+  transform: rotate(-225deg);
+  top: 10px;
+  left: 5px;
+  width: 70%;
+  transition: 1s ease;
+}
+
 /***** MAIN MOVIE *****/
 
 .main-movie {
-  font-size: 16px;
+  font-size: 14px;
   height: 700px;
   padding-left: 25px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,25 +152,21 @@ header nav a:hover {
 }
 
 .description {
-  text-align: justify;
-  margin-top: 10px;
+  text-align: left;
+  margin-top: 20px;
   margin-bottom: 40px;
-  width: 350px;
-
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  width: 400px;
 }
 
 /***** BUTTONS *****/
 
 .btn {
   border-radius: 3px;
-
   padding: 11px 33px 11px 27px;
   margin: 0 15px 0 0;
-
+  font-family: "netflix light";
   font-size: 20px;
-  text-transform: uppercase;
+  font-weight: bold;
 
   cursor: pointer;
 }

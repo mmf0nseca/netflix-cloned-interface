@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix - MMF's choices</title>
+  <title>Netflix - Favorite Ones</title>
 
   <link rel="stylesheet" href="style/main.css">
 
@@ -25,7 +25,11 @@
         <h2>
           <a class="logo" href="https://www.netflix.com/browse" target="_blank">NETFLIX</a>
         </h2>
-        <nav>
+        <input id="hamburger" type="checkbox" style="display:none">
+        <label for="hamburger">
+          <div class="hamburger active"></div>
+        </label>
+        <nav class="menu">
           <a href="#">Home</a>
           <a href="#">TV Shows</a>
           <a href="#">Movies</a>
@@ -41,7 +45,7 @@
             <img src="/img/jurassic-logo.png" alt="Jurassic World">
           </h3>
           <p class="description">
-            Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.
+            Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond. Everything looks fine until they decided to create a new species.
           </p>
           <div class="buttons">
             <a href="https://www.youtube.com/watch?v=RFinNxS5KN4" target="blank">
@@ -118,6 +122,7 @@
   </div>
 
   <script src="https://kit.fontawesome.com/af6e2636eb.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="/js/owl/jquery.min.js"></script>
   <script src="/js/owl/owl.carousel.min.js"></script>
   <script src="/js/setup.js"></script>
